@@ -38,7 +38,9 @@ endif()
 
 find_package(sensor_msgs REQUIRED)
 
-find_package(OpenCV 4 QUIET
+set(WORKING_SPACE /Development/)
+
+find_package(OpenCV 4.4.0 EXACT REQUIRED PATHS ${WORKING_SPACE}/opencv-4.4/lib/cmake/opencv4/ NO_DEFAULT_PATH QUIET
   COMPONENTS
     opencv_core
     opencv_imgproc
